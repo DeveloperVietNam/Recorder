@@ -10,12 +10,9 @@
   ],
   "basePath": "/",
   "paths": {
-    "/users": {
-      "post": {
-        "tags": [
-          "Users"
-        ],
-        "summary": "Add new user",
+    "/addCookie": {
+      "get": {
+        "summary": "Thêm mới nếu chưa tồn tại. nếu tồn tại rồi thì cập nhật Cookie",
         "consumes": [
           "application/json"
         ],
