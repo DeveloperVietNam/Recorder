@@ -11,7 +11,7 @@
   "basePath": "/",
   "paths": {
     "/addCookie": {
-      "get": {
+      "post": {
         "summary": "Thêm mới nếu chưa tồn tại. nếu tồn tại rồi thì cập nhật Cookie",
         "consumes": [
           "application/json"
@@ -19,7 +19,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
+        "headers": [
           {
             "in": "body",
             "name": "data",
