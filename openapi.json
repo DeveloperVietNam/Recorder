@@ -1,0 +1,73 @@
+{
+  "swagger": 2,
+  "info": {
+    "description": "API v1",
+    "version": "1.0.0",
+    "title": "API cho hệ thống"
+  },
+  "schemes": [
+    "https"
+  ],
+  "basePath": "/",
+  "paths": {
+    "/users": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Add new user",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "data",
+            "description": "New user info",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "User 1"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "12345678"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Create user success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "User 1"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Create user fail",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "errors": null,
+                "type": "string",
+                "example": "Some thing went wrong"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
